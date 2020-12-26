@@ -1,5 +1,5 @@
-const retry = (count: number = 3) => async(fn: Function): Promise<any> => {
-	let error: Error | null = null
+export const retry = (count: number = 3) => async(fn: Function): Promise<any> => {
+	let error: Error = null
 
 	for (let i = 0; i < count; i++) {
 		try {
@@ -12,5 +12,3 @@ const retry = (count: number = 3) => async(fn: Function): Promise<any> => {
   
 	throw error
 }
-
-export default retry
