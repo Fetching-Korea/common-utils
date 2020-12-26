@@ -1,12 +1,12 @@
 import { sleep } from './'
 
-export const retry = (count: number = 3, delay: number = 0) => async(fn: Function): Promise<any> => {
+export const retry = (count: number = 3, delay: number = 0) => async <T>(fn: Function): Promise<any> => {
 	let error: Error = null
 
 	for (let i = 0; i < count; i++) {
 		try {
 			const result = await fn()
-			return result
+			return <T>result
 		} catch (e) {
 			if (error === null) error = e
 		}
