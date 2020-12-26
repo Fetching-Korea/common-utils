@@ -1,4 +1,6 @@
-export const retry = (count: number = 3) => async(fn: Function): Promise<any> => {
+import { sleep } from './'
+
+export const retry = (count: number = 3, delay: number = 0) => async(fn: Function): Promise<any> => {
 	let error: Error = null
 
 	for (let i = 0; i < count; i++) {
@@ -8,6 +10,7 @@ export const retry = (count: number = 3) => async(fn: Function): Promise<any> =>
 		} catch (e) {
 			if (error === null) error = e
 		}
+		if (delay !== 0) await sleep(delay)
 	}
   
 	throw error
