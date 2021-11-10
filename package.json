@@ -1,16 +1,24 @@
 {
-  "name": "common-utils",
+  "name": "@fetching-korea/common-utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": false,
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
+    "deploy": "tsc && npm publish --access=public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Fetching-Korea/common-utils.git"
   },
-  "author": "",
+  "author": {
+    "name": "Fetching-Korea",
+    "email": "fetchingkorea@gmail.com",
+    "url": "https://github.com/orgs/Fetching-Korea"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Fetching-Korea/common-utils/issues"
