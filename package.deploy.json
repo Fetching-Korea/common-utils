@@ -3,13 +3,8 @@
   "version": "1.0.2",
   "description": "",
   "private": false,
-  "main": "dist/index.js",
-  "types" : "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "deploy": "npm run build && cp ./README.md ./dist/README.md && cp ./package.json ./dist/package.json && npm publish ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.js",
+  "types" : "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Fetching-Korea/common-utils.git"
